@@ -40,7 +40,7 @@ public class Metronome : MonoBehaviour
 
     private void Update()
     {
-        float postion = SoundManager.Instance.TimePositionMs;
+       float postion = SoundManager.instance.TimePositionMs;
 
         if (postion >= nextbeatPosition)
         {

@@ -63,7 +63,7 @@ public class ButtonJudge : MonoBehaviour
 
     private void CheckButton(string pressed)
     {
-        float currentTime = SoundManager.Instance.TimePositionMs;
+        float currentTime = SoundManager.instance.TimePositionMs;
         bool inWindow = currentTime >= Metronome.Instance.activeBeatStartPosition &&
                         currentTime <= Metronome.Instance.activeBeatEndPosition;  // then its true
 

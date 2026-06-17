@@ -1427,11 +1427,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1066445687}
-  - component: {fileID: 1066445686}
   - component: {fileID: 1066445685}
   - component: {fileID: 1066445688}
+  - component: {fileID: 1066445689}
+  - component: {fileID: 1066445690}
   m_Layer: 0
-  m_Name: MusicPlayer
+  m_Name: SoundManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1534,20 +1535,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1066445686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066445684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e95b1b6912086478a4b3b2cbc2200b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  musicSource: {fileID: 1066445685}
-  song: {fileID: 8300000, guid: 4f7418f0a3176af43a033b5e0d4fa40f, type: 3}
 --- !u!4 &1066445687
 Transform:
   m_ObjectHideFlags: 0
@@ -1581,6 +1568,75 @@ MonoBehaviour:
   buttonCSound: {fileID: 8300000, guid: 35037db95a742754188890d61d49843d, type: 3}
   buttonDSound: {fileID: 0}
   wrongSound: {fileID: 8300000, guid: f374822ca11e6e84d983de9963d09a53, type: 3}
+--- !u!114 &1066445689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066445684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e95b1b6912086478a4b3b2cbc2200b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  sounds:
+  - name: Highhat Start
+    clip: {fileID: 8300000, guid: 470ad088a2323bd49993154e37311a45, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Main Beat
+    clip: {fileID: 8300000, guid: 4f7418f0a3176af43a033b5e0d4fa40f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Wrong Note
+    clip: {fileID: 8300000, guid: f374822ca11e6e84d983de9963d09a53, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Snare
+    clip: {fileID: 8300000, guid: 31132528d1ef21143b564e1dc57352ac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Kick
+    clip: {fileID: 8300000, guid: 35037db95a742754188890d61d49843d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: HighHat
+    clip: {fileID: 8300000, guid: c841f35c67719514d85143a3c65edc48, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  musicSource: {fileID: 1066445685}
+--- !u!114 &1066445690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066445684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798cf47c05044aa498aad7ddd8c51df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Test
+  soundManager: {fileID: 1066445689}
 --- !u!1 &1274554820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,6 +2508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 798cf47c05044aa498aad7ddd8c51df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Test
+  soundManager: {fileID: 0}
 --- !u!114 &1817350862
 MonoBehaviour:
   m_ObjectHideFlags: 0
