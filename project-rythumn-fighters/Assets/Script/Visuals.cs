@@ -37,7 +37,7 @@ public class Visuals : MonoBehaviour
     {
         if (beat == beatNum)
         {
-            spriteRenderer.color = Color.red;
+            spriteRenderer.color = Color.pink;
         }
         else
         {
@@ -49,7 +49,7 @@ public class Visuals : MonoBehaviour
     {
         if (measure == measureNum)
         {
-           spriteRenderer.color = Color.red;
+           spriteRenderer.color = Color.yellow;
         }
         else
         {

@@ -11,10 +11,8 @@ public class GameManager : MonoBehaviour
     {
         Metronome.Instance.bpm = Starterbpm;
         starterBeatVisuals.SetActive(true);
-        cardsVisual.SetActive(false);
+        cardsVisual.SetActive(true);
         Metronome.Instance.barLength = starterBearBarLength;
-
-
     }
 
     void Update()

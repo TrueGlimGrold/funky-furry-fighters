@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using Unity.VisualScripting.FullSerializer;
 
 public class ButtonJudge : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class ButtonJudge : MonoBehaviour
     private Action onCPressed;
     private Action onDPressed;
 
+    private int currentIndex = 0;
+    public static event System.Action<int> OnCompletedNote;
 
 
     private void Awake()
@@ -63,6 +66,7 @@ public class ButtonJudge : MonoBehaviour
 
     private void CheckButton(string pressed)
     {
+       // Debug.Log($"RGDM Pressed {pressed}");
         float currentTime = SoundManager.Instance.TimePositionMs;
         bool inWindow = currentTime >= Metronome.Instance.activeBeatStartPosition &&
                         currentTime <= Metronome.Instance.activeBeatEndPosition;  // then its true
@@ -85,7 +89,8 @@ public class ButtonJudge : MonoBehaviour
                 _ => null
             };
             if (clip) audioSource.PlayOneShot(clip);
-            Debug.Log($"Correct! {pressed}");
+            Debug.Log($"Correct! {pressed} Mesure Index {currentIndex}");
+            OnCompletedNote?.Invoke(currentIndex);  
         }
         else
         {
@@ -97,6 +102,8 @@ public class ButtonJudge : MonoBehaviour
     private void Play(int measure)
     {
         int index = (measure - 1); // to make measure count from 0 to 3 again
+        currentIndex = index;
+   //     Debug.Log($"Current index {currentIndex} measure {measure}");
         correctHighHat = GetPatternValue(patternHighHat, index);
     }
 

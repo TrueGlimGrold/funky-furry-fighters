@@ -351,7 +351,7 @@ MonoBehaviour:
   cardsVisual: {fileID: 226749724}
   starterBearBarLength: 8
   starterBarCompleted: 0
-  Starterbpm: 200
+  Starterbpm: 50
 --- !u!4 &131890244
 Transform:
   m_ObjectHideFlags: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Visuals
   beatNum: 0
-  measureNum: 1
+  measureNum: 0
   isBeatVisual: 0
   isMeasureVisual: 1
 --- !u!212 &287910797
@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Visuals
   beatNum: 0
-  measureNum: 2
+  measureNum: 0
   isBeatVisual: 0
   isMeasureVisual: 1
 --- !u!212 &752387696
@@ -3174,9 +3174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 797643f13e73b1543a8e422cbacd10f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metronome
-  bpm: 200
+  bpm: 100
   barLength: 4
-  margin: 100
+  margin: 500
 --- !u!4 &2104380911
 Transform:
   m_ObjectHideFlags: 0

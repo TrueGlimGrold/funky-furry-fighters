@@ -19,7 +19,7 @@ public class Test : MonoBehaviour
 
     private void HandleA_ButtonPressed()
     {
-        Debug.Log("A Button Pressed");
+       // Debug.Log("A Button Pressed");
     }
 
     private void HandleB_ButtonPressed()
